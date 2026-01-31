@@ -1,29 +1,33 @@
 #pragma once
-#include <raylib.h>
 #include <string>
+#include "Movement.h"
 
 class GameLoop
 {
 private:
 	unsigned short int mScreenWidth;
 	unsigned short int mScreenHeight;
-	Color mBackgroundColor;
 	std::string mWinName;
+	Movement test;
 
 public:
+	~GameLoop();
 	GameLoop()
 	{
 		mScreenWidth = 800;
 		mScreenHeight = 600;
 		mWinName = "Default Window";
-		mBackgroundColor = Color(100, 255, 255, 255);
 	}
 
-	GameLoop(unsigned short int _width, unsigned short int _height, Color _color, std::string _winName)
-		: mScreenWidth(_width), mScreenHeight(_height), mBackgroundColor(_color), mWinName(_winName)
+	GameLoop(unsigned short int _width, unsigned short int _height, std::string _winName)
+		: mScreenWidth(_width), mScreenHeight(_height), mWinName(_winName)
 	{
-
+	
 	}
 
 	void StartGameLoop();
+	
+	// getters
+	unsigned short int GetScreenWidth() const { return mScreenWidth; }
+	unsigned short int GetScreenHeight() const { return mScreenHeight; }
 };

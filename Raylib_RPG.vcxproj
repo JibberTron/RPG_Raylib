@@ -133,11 +133,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Character.cpp" />
+    <ClCompile Include="Source\Game.cpp" />
     <ClCompile Include="Source\GameLoop.cpp" />
     <ClCompile Include="Source\Main.cpp" />
+    <ClCompile Include="Source\Movement.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Include\Character.h" />
+    <ClInclude Include="Include\Game.h" />
     <ClInclude Include="Include\GameLoop.h" />
+    <ClInclude Include="Include\Movement.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
