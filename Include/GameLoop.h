@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include "Movement.h"
+#include "Renderer.h"
 
 class GameLoop
 {
@@ -8,7 +8,7 @@ private:
 	unsigned short int mScreenWidth;
 	unsigned short int mScreenHeight;
 	std::string mWinName;
-	Movement test;
+	Renderer render;
 
 public:
 	~GameLoop();

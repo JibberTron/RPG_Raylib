@@ -5,45 +5,14 @@ Character::Character()
 	mPositionX = 10.f;
 	mPositionY = 10.f;
 	mVelocity = 250.f;
-	mState = MovementState::IDLE;
-	mDirection = MovementDirection::DEFAULT;
-	mFrameMovement = 1.f;
+	mFirstName = " ";
+	mLastName = " ";
+	mHealth = 0;
 }
 
-Character::Character(float _x, float _y) : mPositionX(_x), mPositionY(_y)
+Character::Character(float _x, float _y, std::string _firstName, std::string _lastName, unsigned int _health) :
+	mPositionX(_x), mPositionY(_y), mFirstName(_firstName), mLastName(_lastName), mHealth(_health)
 {
 	mVelocity = 250.f;
-	mState = MovementState::IDLE;
-	mDirection = MovementDirection::DEFAULT;
-	mFrameMovement = 1.f;
 }
 
-Character::Character(const Character& _copy)
-{
-	mPositionX = _copy.mPositionX;
-	mPositionY = _copy.mPositionY;
-	mVelocity = _copy.mVelocity;
-	mState = _copy.mState;
-	mDirection = _copy.mDirection;
-	mFrameMovement = _copy.mFrameMovement;
-}
-
-Character::~Character()
-{
-
-}
-
-Character& Character::operator=(const Character& _assign)
-{
-	if (this != &_assign)
-	{
-		mPositionX = _assign.mPositionX;
-		mPositionY = _assign.mPositionY;
-		mVelocity = _assign.mVelocity;
-		mState = _assign.mState;
-		mDirection = _assign.mDirection;
-		mFrameMovement = _assign.mFrameMovement;
-	}
-
-	return *this;
-}
