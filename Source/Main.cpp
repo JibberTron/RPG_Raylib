@@ -13,7 +13,7 @@ void MemLeakDetection()
 int main()
 {
 	MemLeakDetection();
-	GameLoop loop = GameLoop(1800, 900, "RPG TESTING");
+	GameLoop loop = GameLoop(1800, 900, "RPG");
 	loop.StartGameLoop();
 	return 0;
 }
