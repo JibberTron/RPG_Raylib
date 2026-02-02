@@ -1,7 +1,6 @@
 #include <raylib.h>
 #include "GameLoop.h"
 
-
 GameLoop::~GameLoop()
 {
 
