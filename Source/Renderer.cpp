@@ -30,6 +30,21 @@ void Renderer::OnScreenStats()
 	std::string direction;
 	std::string state;
 	std::string life;
+	std::string race;
+
+	switch (mCharacterMovement.GetPlayer().GetRace())
+	{
+	case Race::HUMAN:
+		race = "HUMAN";
+		break;
+
+	case Race::UNDEAD:
+		race = "UNDEADE";
+		break;
+
+	default:
+		break;
+	}
 
 	switch (mCharacterMovement.GetPlayer().GetDirection())
 	{
@@ -103,7 +118,7 @@ void Renderer::OnScreenStats()
 	DrawText(TextFormat(("Location: \nX - %1.f \nY- %1.f"), mCharacterMovement.GetPlayer().GetPosX(), mCharacterMovement.GetPlayer().GetPosY()), 20, 20, 20, BLACK);
 	DrawText(TextFormat(("Direction: %s"), direction.c_str()), 150, 20, 20, BLACK);
 	DrawText(TextFormat(("State: %s"), state.c_str()), 400, 20, 20, BLACK);
-	DrawText(TextFormat(("Alive: %s"), life.c_str()), 600, 20, 20, BLACK);
+	DrawText(TextFormat(("Race: %s"), race.c_str()), 600, 20, 20, BLACK);
 	DrawText(TextFormat(("Velocity: %f"), mCharacterMovement.GetPlayer().GetVelocity()), 900, 20, 20, BLACK);
 
 }
